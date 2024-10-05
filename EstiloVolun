@@ -1,0 +1,122 @@
+/* Plantilla de la página del mentor */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #83368c;
+    margin: 0;
+    padding: 70px 0;
+    text-align: center;
+    overflow-x: hidden; /* Evitar el desplazamiento horizontal */
+}
+
+header {
+    background-image: url('222.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    color: white;
+    padding: 75px 20px; 
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transition: all 0.5s ease; 
+    z-index: 1000;
+}
+
+header.hidden {
+    padding: 0; 
+    height: 0; 
+    overflow: hidden; /* Evitar el desbordamiento */
+}
+
+main {
+    padding: 0 10px;
+    max-width: 800px;
+    margin: 100px auto 20px; 
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: justify; 
+    animation: fadeIn 0.6s ease-in-out; /* Animación de desvanecimiento */
+}
+
+h1, h2 {
+    color: #333;
+    text-align: center; 
+}
+
+p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+    text-align: justify; 
+}
+
+.boton-redondeado {
+    display: inline-block;
+    padding: 15px 25px;
+    margin: 10px;
+    font-size: 16px;
+    color: white;
+    background-color: #5e2a71;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Efecto de transformación */
+}
+
+.boton-redondeado:hover {
+    background-color: #451b58;
+    transform: scale(1.05); /* Efecto de aumento al pasar el mouse */
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    position: fixed;
+    bottom: -50px;
+    width: 100%;
+    transition: bottom 0.5s ease; 
+}
+
+footer.visible {
+    bottom: 0; 
+}
+
+.espacio {
+    padding: 10px;
+}
+
+/* Estilos para centrar los botones */
+.botones-inicio {
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    flex-wrap: wrap; /* Permitir que los botones se ajusten si no hay suficiente espacio */
+    margin: 20px 0; /* Espacio alrededor de los botones */
+}
+
+/* Animación de desvanecimiento */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 600px) {
+    main {
+        padding: 15px;
+        margin: 150px 10px 10px; /* Ajusta el margen para pantallas más pequeñas */
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    footer {
+        padding: 10px;
+    }
+}

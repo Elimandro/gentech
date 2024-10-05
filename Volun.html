@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voluntariado</title>
+    <link rel="stylesheet" href="EstiloVolun">
+</head>
+<body>
+    <header>
+        <h1>Formulario de Voluntariado</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Regístrate para ser Voluntario</h2>
+            <form id="volunteerForm">
+                <label for="name">Nombre Completo:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+
+                <label for="email">Correo Electrónico:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="specialty">Seleccione su Especialidad:</label><br>
+                <select id="specialty" name="specialty" onchange="showQuiz()" required>
+                    <option value="">Seleccione una opción</option>
+                    <option value="matematica">Matemática Básica</option>
+                    <option value="educacion_fisica">Educación Física</option>
+                    <option value="tecnologia">Tecnología Básica</option>
+                </select><br><br>
+
+                <!-- Este es el apartado que se muestra dinámicamente -->
+                <div id="quiz"></div>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Mentorías Intergeneracionales. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
