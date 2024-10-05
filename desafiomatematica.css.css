@@ -1,0 +1,142 @@
+/* Plantilla de la página */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    overflow-x: hidden;
+    color: #333;
+}
+
+header {
+    background-image: linear-gradient(to bottom right, #83368c, #5e2a71);
+    color: white;
+    padding: 20px 20px;  /* Reducción del padding */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.5s ease;
+}
+
+main {
+    padding: 120px 20px; /* Aumentar padding superior para que el contenido no se superponga */
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.05);
+    animation: fadeIn 1s ease-in-out;
+}
+
+h1 {
+    font-weight: 600;
+    font-size: 2rem; /* Reducir el tamaño del texto del encabezado */
+    margin: 0; /* Eliminar margen para que no haya espacio adicional */
+}
+
+h2 {
+    font-weight: 500;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.question {
+    margin-bottom: 25px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideIn 0.8s forwards ease;
+}
+
+.boton-redondeado {
+    padding: 15px 30px;
+    font-size: 1rem;
+    color: white;
+    background-color: #5e2a71;
+    border-radius: 30px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.boton-redondeado:hover {
+    background-color: #451b58;
+    transform: scale(1.05);
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    position: fixed;
+    bottom: -50px;
+    width: 100%;
+    transition: bottom 0.5s ease;
+    font-size: 0.9rem;
+}
+
+footer.visible {
+    bottom: 0;
+}
+
+#quiz-container {
+    text-align: left;
+}
+
+#result {
+    font-size: 1.2rem;
+    color: #333;
+    margin-top: 20px;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 600px) {
+    main {
+        padding: 100px 20px; /* Ajustar padding superior para móviles */
+        margin: 0 10px;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    h1 {
+        font-size: 1.8rem; /* Ajustar el tamaño del encabezado en móviles */
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+}
